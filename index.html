@@ -7,6 +7,16 @@
 <!-- O mesmo monograma no icone da aba, embutido como data URI: sem arquivo
      .ico solto na pasta e sem nenhuma requisicao de rede. -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 110 100'%3E%3Cellipse cx='54' cy='56' rx='48' ry='18' transform='rotate(-22 54 56)' fill='none' stroke='%2322d3ee' stroke-width='6' opacity='.85'/%3E%3Cpath d='M30,16 H48 V66 H78 V84 H30 Z' transform='translate(12,0) skewX(-12)' fill='%23e935ff'/%3E%3C/svg%3E">
+<!-- Icone da tela inicial do celular ("Adicionar a tela inicial"). Os arquivos
+     saem do instalar_app.py (pasta icones/ e manifest.webmanifest) e vao para o
+     GitHub junto com a pagina. Abrindo do disco, sao arquivos locais: nada de rede. -->
+<link rel="apple-touch-icon" href="icones/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#050109">
+<meta name="apple-mobile-web-app-title" content="Holerites">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
   /* ===================================================================
      Tema "HUD" -- preto, roxo, magenta e ciano. Paineis chanfrados com a
@@ -148,14 +158,14 @@
 
   /* ---- cabecalho ---- */
   .top-bar { display: flex; align-items: flex-start; gap: 15px; max-width: 74ch; margin: 0 0 22px; }
-  .logo { flex: none; width: 66px; height: 60px; overflow: visible; margin-top: 1px; }
+  .logo { flex: none; width: 80px; height: 73px; overflow: visible; margin-top: -2px; }
   .logo .letra { fill: var(--accent); filter: drop-shadow(0 0 11px rgba(233,53,255,0.75)); }
   .logo .orbita {
     fill: none; stroke: var(--accent-2); stroke-width: 3.5; opacity: 0.85;
     filter: drop-shadow(0 0 7px rgba(34,211,238,0.7));
   }
   .logo .faisca { fill: var(--text-primary); opacity: 0.9; }
-  @media (max-width: 560px) { .logo { width: 48px; height: 44px; } }
+  @media (max-width: 560px) { .logo { width: 58px; height: 53px; } }
 
   h1 {
     font-family: var(--display); font-size: clamp(21px, 3.1vw, 28px);
